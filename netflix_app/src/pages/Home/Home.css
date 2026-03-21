@@ -1,0 +1,30 @@
+.hero
+{
+    position:relative;/* original position*/
+}
+.banner-img
+{
+    width:100%;
+    mask-image: linear-gradient(to right,transparent,black 75%);
+    -webkit-mask-image : linear-gradient(to right,transparent,black 75%);
+}
+/* in mask image used to controls which parts of an element are visible or hidden
+black means visible and transparent means hidden */
+.hero-caption
+{
+    position:absolute;/*Absolute works relative to the nearest parent with position set*/
+    width:100%;
+    padding-left:6%;
+    bottom:0;
+}
+.caption-img
+{
+    width:90%;
+    max-width:420px;
+    margin-bottom:30px;
+}
+.hero-caption p{
+    max-width:700px;
+    font-size:17px;
+    margin-bottom:20px;
+}

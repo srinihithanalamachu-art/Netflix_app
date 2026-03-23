@@ -14,7 +14,7 @@
 
 }
 .card-list::-webkit-scrollbar{
-display:none;
+display:none;/* these is scrollbar which is hidden */
 }
 .card-list img{
     width:240px;

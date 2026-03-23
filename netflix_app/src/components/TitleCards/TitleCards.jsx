@@ -2,9 +2,10 @@ import React,{useRef,useEffect} from 'react'
 import './TitleCards.css'
 import cards_data from '../../assets/cards/Cards_data'
 
-const TitleCards = () => {
+const TitleCards = ({title,category}) => {
   const cardsRef=useRef();
 const handleWheel=(event)=>{
+  /* it converts the vertical scroll into horizontal movement */
   event.preventDefault();
   cardsRef.current.scrollLeft+=event.deltaY;
 }
@@ -14,7 +15,7 @@ useEffect(()=>
 },[])
   return (
     <div className='titlecards'>
-      <h2>Popular on Netflix</h2>
+      <h2>{title? title:"Popular on Netflix"}</h2>
       <div className="card-list" ref={cardsRef}>
         {
           cards_data.map((card,index)=>
